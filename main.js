@@ -38,6 +38,7 @@ app.post("/api/", function (req, res) {
 
 app.listen(3000);
 
+// token is set on server environment
 var token = process.env["FB_TOKEN"];
 
 function sendTextMessage(sender, text) {
