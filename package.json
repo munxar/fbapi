@@ -4,7 +4,7 @@
   "description": "fbapi backend for hackaton",
   "main": "main.js",
   "scripts": {
-    "test": "echo 'ok'"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",

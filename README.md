@@ -2,3 +2,8 @@
 
 # fbapi
 liip facebook api for hackaton
+
+# how to run
+npm i
+npm start
+
