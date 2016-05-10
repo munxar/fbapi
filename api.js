@@ -20,9 +20,13 @@ api.post("/", function (req, res) {
         sender = event.sender.id;
         if (event.message && event.message.text) {
             text = event.message.text;
-            // Handle a text message from this sender
-            //console.log("%s: %s", sender, text);
-            fbapi.sendTextMessage(sender, text);
+            if(text === "/start") {
+                setTimeout(function() {
+                    sendTextMessage(sender, "Bestellung ist fertig zum abholen.");
+                }, 10*1000);
+                sendTextMessage(sender, "Deine Bestellung wir bearbeitet.");
+            }
+            sendTextMessage(sender, text);
         }
     }
     res.sendStatus(200);
