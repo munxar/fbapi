@@ -22,11 +22,11 @@ api.post("/", function (req, res) {
             text = event.message.text;
             if(text === "/start") {
                 setTimeout(function() {
-                    sendTextMessage(sender, "Bestellung ist fertig zum abholen.");
+                    fbapi.sendTextMessage(sender, "Bestellung ist fertig zum abholen.");
                 }, 10*1000);
-                sendTextMessage(sender, "Deine Bestellung wir bearbeitet.");
+                fbapi.sendTextMessage(sender, "Deine Bestellung wir bearbeitet.");
             }
-            sendTextMessage(sender, text);
+            fbapi.sendTextMessage(sender, text);
         }
     }
     res.sendStatus(200);
